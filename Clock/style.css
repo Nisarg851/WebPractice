@@ -1,0 +1,86 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+}
+
+body{
+    background: linear-gradient(to right,blue,red);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+.clock{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 20px solid black;
+    background-color: white;
+    position: relative;
+}
+
+.number{
+    --rotate_number: 0deg;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    transform: rotate(var(--rotate_number));
+}
+
+.number1{--rotate_number: 30deg; }
+.number2{--rotate_number: 60deg; }
+.number3{--rotate_number: 90deg; }
+.number4{--rotate_number: 120deg; }
+.number5{--rotate_number: 150deg; }
+.number6{--rotate_number: 180deg; }
+.number7{--rotate_number: 210deg; }
+.number8{--rotate_number: 240deg; }
+.number9{--rotate_number: 270deg; }
+.number10{--rotate_number: 300deg; }
+.number11{--rotate_number: 330deg; }
+
+.hand{
+    --rotation:0;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    width: 50px;
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid black;
+    transform: translateX(50%) rotate(calc(var(--rotation)*1deg));
+    background-color: black;
+    transform-origin: bottom;
+}
+
+.clock::after{
+    content: '';
+    position: absolute;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    bottom: 50%;
+    right:50%;
+    transform: translate(50%,50%);
+    border-radius: 50%;
+    background-color: black;
+}
+
+.hour{
+    height: 200px;
+    width: 30px;
+    /* transform: translateX(40%); */
+}
+.minute{
+    width: 10px;
+    width: 20px;
+}
+.second{
+    width: 10px;
+    background-color: red;
+}
