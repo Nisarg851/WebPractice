@@ -1,0 +1,107 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.container{
+    width: 70%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    transform-style: preserve-3d;
+    width: 40%;
+    height: 35rem;
+    position: relative;
+    margin: 4rem;
+    /* border: 2px solid black; */
+    box-shadow: 0px 20px 20px rgba(0,0,0,0.2),0px 0px 50px rgba(0,0,0,0.2);
+    border-radius: 1.5%;
+}
+
+.shoe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+    /* border: 2px solid black; */
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    padding: 0.2rem;
+    /* border: 2px solid black; */
+}
+
+p{
+    /* border: 2px solid black; */
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+img{
+    width: 70%;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 1s ease;
+}
+
+.circle{
+    width: 12rem;
+    height: 12rem;
+    background-color: gold;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.ShoeName{
+    transition: all 1s ease;
+}
+
+.sizeBtns{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    margin: 2rem;
+    transition: all 1s ease;
+}
+
+button{
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 10px 5px grey;
+    outline: none;
+}
+
+button.active{
+    background-color: rgb(21, 255, 0);
+    box-shadow: 0px 10px 10px grey;
+}
+
+.purchase{
+    display: flex;
+    justify-content: center;
+    transition: all 1s ease;
+}
+
+.purchase > button{
+ background-color: red;
+ width: 20rem;
+ font-size: x-large;
+}
